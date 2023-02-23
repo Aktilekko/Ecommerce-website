@@ -1,0 +1,55 @@
+.footer {
+  &__logo {
+    padding: 40px 0;
+  }
+  background: var(--primary-color);
+
+  &__text {
+    color: rgb(233, 233, 233);
+  }
+
+  &__links {
+    padding: 40px 0;
+    &-title {
+      color: #fff;
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+
+    & ul li {
+      background: var(--primary-color);
+
+      & a {
+        color: rgb(233, 233, 233);
+        cursor: pointer;
+      }
+
+      & span i {
+        color: #fff;
+      }
+
+      & p {
+        color: rgb(233, 233, 233);
+      }
+    }
+  }
+
+  &__contact li {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+  }
+
+  &__copyright {
+    color: rgb(233, 233, 233);
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer__links {
+    padding: 20px 0;
+  }
+}
