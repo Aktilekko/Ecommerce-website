@@ -43,6 +43,14 @@ const Shop = () => {
     }
   };
 
+  const handleSearch = (e) => {
+    const searchQuery = e.target.value;
+    const searchedProducts = products.filter((item) =>
+      item.productName.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    setProductsData(searchedProducts);
+  };
+
   return (
     <Helmet title="Shop">
       <CommonSection title="Products " />
@@ -50,32 +58,36 @@ const Shop = () => {
       <section>
         <Container>
           <Row>
-            <Col lg="3" md="3">
-              <div className="filter__widget">
-                <select onChange={handleFilter}>
-                  <option>Filter by category</option>
-                  <option value="chair">Chair</option>
-                  <option value="mobile">Mobile</option>
-                  <option value="watch">Watch</option>
-                  <option value="wireless">Wireless</option>
-                  <option value="fitness">Fitness</option>
-                </select>
+            <Col lg="6" md="12">
+              <div className="filter__widget-wrapper">
+                <div className="filter__widget">
+                  <select onChange={handleFilter}>
+                    <option>Filter by category</option>
+                    <option value="chair">Chair</option>
+                    <option value="mobile">Mobile</option>
+                    <option value="watch">Watch</option>
+                    <option value="wireless">Wireless</option>
+                    <option value="fitness">Fitness</option>
+                  </select>
+                </div>
+
+                <div className="filter__widget text-end">
+                  <select name="" id="">
+                    <option>Sort by</option>
+                    <option value="ascending">Ascending</option>
+                    <option value="descending">Descending</option>
+                  </select>
+                </div>
               </div>
             </Col>
 
-            <Col lg="3" md="3">
-              <div className="filter__widget">
-                <select name="" id="">
-                  <option>Sort by</option>
-                  <option value="ascending">Ascending</option>
-                  <option value="descending">Descending</option>
-                </select>
-              </div>
-            </Col>
-
-            <Col lg="6" md="6">
+            <Col lg="6" md="12">
               <div className="search__box">
-                <input type="text" placeholder="Search..." />
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  onChange={handleSearch}
+                />
                 <span>
                   <i class="ri-search-line"></i>
                 </span>
@@ -89,7 +101,7 @@ const Shop = () => {
         <Container>
           <Row>
             {productsData.length === 0 ? (
-              <h1>No products are found</h1>
+              <h1 className="text-center fs-3">No products are found!</h1>
             ) : (
               <ProductList data={productsData} />
             )}

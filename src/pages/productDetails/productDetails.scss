@@ -1,0 +1,175 @@
+.button {
+  position: relative;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 7px;
+  margin-top: 30px;
+  text-transform: uppercase;
+
+  &_1 {
+    color: #fff;
+    background-color: #5e5373;
+    box-shadow: 0 5px 0px #3c354a;
+    transition-duration: 0.5s;
+
+    &:hover {
+      top: 2px;
+      box-shadow: 0 3px 0px #3c354a;
+      background-color: #18b5a4;
+    }
+  }
+}
+
+.product {
+  &__details {
+    margin-top: 60px;
+
+    & h2 {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    & span i {
+      color: coral;
+    }
+
+    & p span {
+      color: coral;
+      font-weight: 600;
+    }
+  }
+
+  &__price {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+}
+
+.tab__wrapper {
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 500;
+
+  & h6 {
+    cursor: pointer;
+  }
+}
+
+.active__tab {
+  font-weight: 600;
+}
+
+.tab__content p {
+  color: #8e8d8d;
+}
+
+.product__review {
+  &-wrapper {
+    & p {
+      color: #8e8d8d;
+      padding-top: 10px;
+    }
+    & ul li span {
+      color: coral;
+      font-weight: 600;
+    }
+  }
+}
+
+.review__form {
+  width: 70%;
+  margin: auto;
+  margin-top: 50px;
+
+  & h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  &-group {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    & span {
+      color: coral;
+    }
+
+    & textarea {
+      border: 1px solid var(--primary-color);
+      resize: none;
+      width: 100%;
+      border-radius: 5px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &-group input {
+    width: 100%;
+    border-radius: 5px;
+    padding: 8px 20px;
+    border: 1px solid var(--primary-color);
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.related__title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .product__details h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .product__rating {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+  }
+
+  .product__info {
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+
+  .button_1 {
+    display: flex;
+    margin: auto;
+  }
+
+  .short__desc {
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  .product__tab {
+    justify-content: center;
+
+    & h6 {
+      text-align: center;
+    }
+  }
+
+  .product__review-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}

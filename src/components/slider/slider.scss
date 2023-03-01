@@ -24,16 +24,6 @@
   transition: all 0.5s ease;
 }
 
-@media screen and (max-width: 992px) {
-  .content {
-    height: 200px;
-
-    & h2 {
-      font-size: 1.7rem !important;
-    }
-  }
-}
-
 @media screen and (max-width: 768px) {
   .content {
     height: 200px;
@@ -91,7 +81,7 @@
 
 @media screen and (max-width: 600px) {
   .content {
-    width: 80%;
+    width: 60%;
   }
 }
 
@@ -139,4 +129,19 @@ hr {
   height: 2px;
   background: #fff;
   width: 50%;
+}
+
+@media screen and (max-width: 992px) {
+  .content {
+    height: 200px;
+
+    & h2 {
+      font-size: 1.7rem !important;
+    }
+  }
+  .next,
+  .prev {
+    height: 2rem;
+    width: 2rem;
+  }
 }
