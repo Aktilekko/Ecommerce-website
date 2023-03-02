@@ -560,7 +560,7 @@ const products = [
   },
 
   {
-    id: "22",
+    id: "21",
     productName: "Beat EP Headphones",
     imgUrl: productImg25,
     category: "wireless",
@@ -582,7 +582,7 @@ const products = [
     avgRating: 4.8,
   },
   {
-    id: "23",
+    id: "22",
     productName: "Exercise Bike ",
     imgUrl: productImg33,
     category: "fitness",
@@ -600,7 +600,7 @@ const products = [
     avgRating: 4.6,
   },
   {
-    id: "24",
+    id: "23",
     productName: "Basics Neoprene Workout Dumbbell ",
     imgUrl: productImg26,
     category: "fitness",
@@ -618,7 +618,7 @@ const products = [
     avgRating: 4.7,
   },
   {
-    id: "25",
+    id: "24",
     productName: "Bowflex SelectTech 552 Adjustable Dumbbells",
     imgUrl: productImg27,
     category: "fitness",
@@ -636,7 +636,7 @@ const products = [
     avgRating: 4.7,
   },
   {
-    id: "26",
+    id: "28",
     productName: "Balancefrom Rubber Encased Hex Dumbbell in Pairs",
     imgUrl: productImg28,
     category: "fitness",
@@ -654,7 +654,7 @@ const products = [
     avgRating: 4.7,
   },
   {
-    id: "27",
+    id: "29",
     productName: "Hex Dumbbell in Pairs",
     imgUrl: productImg29,
     category: "fitness",
@@ -672,7 +672,7 @@ const products = [
     avgRating: 4.9,
   },
   {
-    id: "28",
+    id: "30",
     productName: "Fizik Tempo R5 Overcurve Cycling Shoe",
     imgUrl: productImg30,
     category: "fitness",
@@ -690,7 +690,7 @@ const products = [
     avgRating: 4.8,
   },
   {
-    id: "29",
+    id: "31",
     productName: "Salomon Men's Speedcross 5 Trail Running Shoes",
     imgUrl: productImg31,
     category: "fitness",
@@ -708,7 +708,7 @@ const products = [
     avgRating: 4.8,
   },
   {
-    id: "30",
+    id: "32",
     productName:
       "Fitbit Versa 3 Health & Fitness Smartwatch with GPS, 24/7 Heart Rate",
     imgUrl: productImg32,
@@ -728,7 +728,7 @@ const products = [
   },
 
   {
-    id: "31",
+    id: "33",
     productName: "Exercise Bike ",
     imgUrl: productImg33,
     category: "fitness",

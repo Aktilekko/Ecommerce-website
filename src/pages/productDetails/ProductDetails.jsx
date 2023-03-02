@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./productDetails.scss";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
@@ -34,8 +34,17 @@ const ProductDetails = () => {
   const relatedProducts = products.filter((item) => item.category === category);
 
   const submitHandler = (e) => {
+    e.preventDefault();
     const reviewUserName = reviewName.current.value;
     const reviewUserMsg = reviewMsg.current.value;
+
+    const reviewObj = {
+      userName: reviewUserName,
+      text: reviewUserMsg,
+      rating,
+    };
+    toast.success("Your review submitted!");
+    console.log(reviewObj);
   };
 
   const addToCart = () => {
@@ -50,10 +59,14 @@ const ProductDetails = () => {
     toast.success("Product added successfully!");
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [product]);
+
   return (
     <Helmet title={productName}>
       <CommonSection title={productName} />
-      <section className="p-0">
+      <section className="p-0 mt-1">
         <Container>
           <Row>
             <Col lg="6">
@@ -150,35 +163,59 @@ const ProductDetails = () => {
                           type="text"
                           placeholder="Enter name"
                           ref={reviewName}
+                          required
                         />
                       </div>
+
                       <div className="review__form-group">
-                        <span onClick={() => setRating(1)}>
+                        <motion.span
+                          whileTap={{ scale: 1.2 }}
+                          onClick={() => setRating(1)}
+                        >
                           1<i class="ri-star-s-fill"></i>
-                        </span>
-                        <span>
+                        </motion.span>
+                        <motion.span
+                          whileTap={{ scale: 1.2 }}
+                          onClick={() => setRating(2)}
+                        >
                           2<i class="ri-star-s-fill"></i>
-                        </span>
-                        <span>
+                        </motion.span>
+                        <motion.span
+                          whileTap={{ scale: 1.2 }}
+                          onClick={() => setRating(3)}
+                        >
                           3<i class="ri-star-s-fill"></i>
-                        </span>
-                        <span>
+                        </motion.span>
+                        <motion.span
+                          whileTap={{ scale: 1.2 }}
+                          onClick={() => setRating(4)}
+                        >
                           4<i class="ri-star-s-fill"></i>
-                        </span>
-                        <span>
+                        </motion.span>
+                        <motion.span
+                          whileTap={{ scale: 1.2 }}
+                          onClick={() => setRating(5)}
+                        >
                           5<i class="ri-star-s-fill"></i>
-                        </span>
+                        </motion.span>
                       </div>
+
                       <div className="review__form-group">
                         <textarea
                           type="text"
                           placeholder="Review message..."
                           rows={4}
                           ref={reviewMsg}
+                          required
                         />
                       </div>
 
-                      <button className="button button_1">Submit</button>
+                      <motion.button
+                        whileTap={{ scale: 1.2 }}
+                        className="button button_1"
+                      >
+                        Submit
+                      </motion.button>
                     </form>
                   </div>
                 </div>
